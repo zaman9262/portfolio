@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, "Meiryo", sans-serif;
+            color: rgb(72, 72, 105);
+            background: white;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #4e61a0;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        header h2 {
+            font-size: 23px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        .hero {
+    min-height: 500px;
+    padding: 70px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #172554, #1e40af);
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    margin-bottom: 25px;
+}
+        
+
+        .hero p {
+            margin: 15px auto 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+        }
+
+        .button {
+            display: inline-block;
+            background: #60a5fa;
+            color: #172554;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #bfdbfe;
+            transform: translateY(-3px);
+        }
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 65px 24px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+            color: #172554;
+        }
+
+        .about {
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(220px, 1fr)
+            );
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(23, 37, 84, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(23, 37, 84, 0.15);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #2563eb;
+        }
+
+        .contact {
+            text-align: center;
+            background: #e5edff;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .hero {
+                padding: 75px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>My Portfolio</h2>
+
+        <nav>
+            <a href="#about">自己紹介</a>
+            <a href="#skills">スキル</a>
+            <a href="#contact">お問い合わせ</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <img
+                src="myphoto.jpg"
+                alt="プロフィール写真"
+                class="profile-photo"
+                >
+            <h1>Welcome to My Website</h1>
+            <h1>NURUZZAMAN MD</h1>
+            <P>Web Developer | Cloud Techonology Enthusiast</P>
+            <p>
+                こんにちは！私のポートフォリオへようこそ。<br>
+                学んだことや、作った作品を紹介します。
+            </p>
+            <a href="#about" class="button">もっと見る ↓</a>
+        </div>
+
+        <section id="about" class="about">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                こんにちは！私は大学で情報技術を学んでいます。<br>
+                プログラミングやWebサイト制作に興味があります。<br>
+                これからさまざまな作品を作っていきたいです。
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">My Interests</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>💻 Programming</h3>
+                    <p>
+                        HTMLやCSSなどを学びながら、
+                        自分のWebサイトを作っています。
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>☁️ Cloud Technology</h3>
+                    <p>
+                        クラウドやネットワークの技術を
+                        少しずつ勉強しています。
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>🚀 My Projects</h3>
+                    <p>
+                        学んだ知識を使って、
+                        自分のアイデアを作品にしていきます。
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact</h2>
+            <p>ボタンを押してみてください！</p>
+
+            <button class="button" onclick="showMessage()">
+                クリックする
+            </button>
+
+            <p id="message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Portfolio</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "ご覧くださいましてありがとうございます！";
+        }
+    </script>
+
+</body>
+</html>
+
